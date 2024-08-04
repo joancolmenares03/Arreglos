@@ -6,6 +6,20 @@ def promedioArray():
     for i in arreglo:
         x += i
     return x/len(arreglo)
+
+def lista():
+    w = input().split()
+    v = input().split()
+    resultado = 0
+    for i in w:
+        w[w.index(i)] = float(i)
+    for i in v:
+        v[v.index(i)] = float(i)
+    
+    for x in w:
+        resultado += x*v[w.index(x)]
+    return resultado
+
 def producto():
     w = input().split()
     v = input().split()
@@ -22,6 +36,7 @@ def producto():
 def main():
     print(promedioArray())
     print(producto())
+    print(lista())
 
 if __name__ == "__main__":
     main()
